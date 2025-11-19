@@ -1,14 +1,12 @@
 
-FROM ubuntu:latest AS build
-
-RUN apt-get update && apt-get install -y openjdk-21-jdk maven
+FROM eclipse-temurin:21-jdk AS build
 
 WORKDIR /app
 COPY . .
 
-RUN mvn clean install -DskipTests
+RUN ./mvnw clean install -DskipTests
 
-FROM openjdk:21-jdk
+FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 EXPOSE 8080
