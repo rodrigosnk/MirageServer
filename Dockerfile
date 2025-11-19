@@ -4,6 +4,8 @@ FROM eclipse-temurin:21-jdk AS build
 WORKDIR /app
 COPY . .
 
+RUN chmod +x mvnw
+
 RUN ./mvnw clean install -DskipTests
 
 FROM eclipse-temurin:21-jre
