@@ -2,6 +2,8 @@ package com.example.MirageServer.repository;
 
 import com.example.MirageServer.model.InvalidatedToken;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.time.Instant;
@@ -11,7 +13,8 @@ import java.util.Optional;
 public interface InvalidatedTokenRepository extends JpaRepository<InvalidatedToken, Long> {
     Optional<InvalidatedToken> findByToken(String token);
     boolean existsByToken(String token);
-    //padrao para entendimento do jpa,,
-    //delete by (expirationtime) before < expiration
-    void deleteByExpirationDateBefore(Instant expiration);
+
+    void deleteByExpirationDateBefore(Instant now);
+
+
 }
