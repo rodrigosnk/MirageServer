@@ -16,7 +16,7 @@ public class DeleteExpiredTokenService {
         this.invalidatedTokenRepository = invalidatedTokenRepository;
     }
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 3600000)
     @Transactional
     public void deleteExpiredTokens() {
         invalidatedTokenRepository.deleteByExpirationDateBefore(Instant.now());
