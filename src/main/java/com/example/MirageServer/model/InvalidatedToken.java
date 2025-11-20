@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 import java.time.Instant;
 
+// serao os tokens salvos na tabela que estao invalidos
 @Entity
 public class InvalidatedToken {
 
