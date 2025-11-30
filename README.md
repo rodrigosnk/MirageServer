@@ -144,3 +144,18 @@ Atualiza a posição de um filme na lista de Top 10.
 }
 ```
 
+
+## Executando o Projeto Localmente
+Para rodar o projeto em ambiente local, recomenda-se o uso da IDE IntelliJ. É necessário configurar corretamente o arquivo .env, pois ele não é detectado automaticamente.
+
+Após isso, você pode executar o projeto utilizando o comando de execução configurado ou simplesmente clicando no botão Run/Play dentro da própria IDE.
+
+### Links
+
+Frontend (Vercel): https://mirage-project.vercel.app/
+
+Backend (Render): https://mirageserver.onrender.com/
+
+### Participantes
+- Rodrigo Garcia Alves
+- Lavinia Rocha Brandino Silva
